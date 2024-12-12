@@ -4,9 +4,19 @@ const taskText = document.getElementById("addTxt");
 const delTask = document.querySelector(".delete");
 
 
+// this function updates the date and time
+function updateDateTime() {
+    let now = new Date();
+    let currentDateTime = now.toLocaleString();
+    document.getElementById('dateTime').textContent = currentDateTime;
+}
+
+// update time on the screen every second
+setInterval(updateDateTime, 1000);
 
 
-//this function add one task to the tasks list
+
+//this function adds one task to the tasks list
 function createTask() {
     let newTask = document.createElement("li") ;
     let text = taskText.value;
@@ -20,7 +30,7 @@ function createTask() {
     } 
 } 
 
-//this function delete one task from the tasks list
+//this function deletes one task from the tasks list
 function deleteTask(event) {
     console.log(event.target);
     let task = event.target.parentNode;
