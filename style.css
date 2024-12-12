@@ -1,0 +1,72 @@
+.title {
+    border: solid black;
+    padding: 10px;
+}
+
+.sortBtns {
+    border: solid gray;
+}
+
+.btnSortTask {
+    background-color: blanchedalmond;
+    border: solid rgb(185, 166, 141);
+    border-radius: 5px;
+    font-size: 11pt;
+    margin-right: 20px;
+    padding: 5px;
+    
+}
+
+.main {
+    background-color: blanchedalmond;
+    border: solid red;
+    padding: 10px;
+}
+
+.tasks {
+    list-style: none;
+}
+
+.tasks > li {
+    border-bottom: 1px solid rgb(185, 166, 141);
+    height: 30px;
+}
+
+.addContainer {
+    border: solid blue;
+    padding: 10px;
+}
+
+#addTxt {
+    background-color: blanchedalmond;
+    border: solid rgb(185, 166, 141);
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 11pt;
+    height: 30px;
+    width: 50%;
+    padding-left: 5px;
+}
+
+#addTxt:hover {
+    background-color: white;
+    border: solid rgb(185, 166, 141);
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 11pt;
+    height: 30px;
+    width: 50%;
+    padding-left: 5px;
+}
+
+#addBtn {
+    background-color: blanchedalmond;
+    border: solid rgb(185, 166, 141);
+    border-radius: 10%;
+    box-sizing: border-box;
+    font-size: 11pt;
+    font-weight: 500;
+    height: 30px;
+    width: 30px;
+    padding: 5px;
+}
