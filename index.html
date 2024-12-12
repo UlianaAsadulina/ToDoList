@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>To Do List</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+       <div class="title">
+            <h1>My Tasks</h1>
+            <h3>current date and time</h3>
+            <p>List of tasks that need to be done: </p>
+            <div class="selectBtns">
+                <button>All Tasks</button>
+                <button>Active Tasks</button>
+                <button>Finished Tasks</button>
+            </div>
+       </div>
+       <div class="main">
+        <ul class="tasks">
+            <li>
+                <div class="oneTask">
+                    <input type="checkbox" name="t1" id="task1">
+                    <label for="t11"> My task #1</label>
+                    <button>important</button>
+                    <button>edit</button>
+                    <button>delete</button>
+                </div>
+               
+            <li> Task#2</li>
+            <li> Task#3</li>
+        </ul>
+
+       </div>
+       <div class="ad">
+        <form >
+            <input type="text">
+            <input type="button" value="Add task">
+        </form>
+       </div>
+
+        <script src="app.js" async defer></script>
+    </body>
+</html>
