@@ -12,34 +12,38 @@
     <body>
        <div class="title">
             <h1>My Tasks</h1>
-            <h3>current date and time</h3>
+            <h3 id="dateTime">current date and time</h3>
             <p>List of tasks that need to be done: </p>
-            <div class="selectBtns">
-                <button>All Tasks</button>
-                <button>Active Tasks</button>
-                <button>Finished Tasks</button>
+            <div class="sortBtns">
+                <button class="btnSortTask">All Tasks</button>
+                <button class="btnSortTask">Active Tasks</button>
+                <button class="btnSortTask">Finished Tasks</button>
             </div>
        </div>
        <div class="main">
         <ul class="tasks">
-            <li>
-                <div class="oneTask">
+            <li class="oneTask">
+            
                     <input type="checkbox" name="t1" id="task1">
-                    <label for="t11"> My task #1</label>
-                    <button>important</button>
-                    <button>edit</button>
-                    <button>delete</button>
-                </div>
+                    <label for="t1"> My task #1</label>
+                    <button class="important">important</button>
+                    <button class="edit">edit</button>
+                    <button class="delete">delete</button>
+                
                
-            <li> Task#2</li>
+            <li> 
+                <label for="t2">
+                    <input type="checkbox" id="task2" name="t2">Task#2
+                </label>
+            </li>
             <li> Task#3</li>
         </ul>
 
        </div>
-       <div class="ad">
+       <div class="addContainer">
         <form >
-            <input type="text">
-            <input type="button" value="Add task">
+            <input type="button" value="+" id="addBtn">
+            <input type="text" id="addTxt" placeholder="add new task">            
         </form>
        </div>
 
