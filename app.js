@@ -36,6 +36,18 @@ function createTask() {
     } 
 } 
 
+// prevent starover if Enter key preesed during new task creation
+function enterPressed (event) {
+    if (event. key === 'Enter') {
+        window.alert('Enter key pressed! Use button "+" to add new task');
+        event.preventDefault();
+    }
+}
+
+
+
+
+
 // reset empty input after task creation
 function clearInput() {
     taskText.value="";
@@ -76,4 +88,5 @@ function addListenerToDeleteButtons () {
 }
 
 addTask.addEventListener('click', createTask);
+taskText.addEventListener('keydown', enterPressed);
 addListenerToDeleteButtons ();
