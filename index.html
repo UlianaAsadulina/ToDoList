@@ -21,30 +21,35 @@
             </div>
        </div>
        <div class="main">
-        <ul class="tasks">
-            <li class="oneTask">
-            
-                    <input type="checkbox" name="t1" id="task1">
-                    <label for="t1"> My task #1</label>
+            <ul class="tasks">
+                <li class="oneTask">
+                    <label>
+                        <input type="checkbox" id="task1">My task #1
+                    </label>
                     <button class="important">important</button>
                     <button class="edit">edit</button>
                     <button class="delete">delete</button>
+                </li>    
+                    
                 
-               
-            <li> 
-                <label for="t2">
-                    <input type="checkbox" id="task2" name="t2">Task#2
-                </label>
-            </li>
-            <li> Task#3</li>
-        </ul>
+                <li> 
+                    <label>
+                        <input type="checkbox" id="task2">My task #2
+                    </label>
+                    <button class="important">important</button>
+                    <button class="edit">edit</button>
+                    <button class="delete">delete</button>
+                </li>
+                
+            </ul>
 
        </div>
+
        <div class="addContainer">
-        <form >
-            <input type="button" value="+" id="addBtn">
-            <input type="text" id="addTxt" placeholder="add new task">            
-        </form>
+            <form >
+                <input type="button" value="+" id="addBtn">
+                <input type="text" id="addTxt" placeholder="add new task">            
+            </form>
        </div>
 
         <script src="app.js" async defer></script>
