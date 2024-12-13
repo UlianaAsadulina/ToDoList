@@ -1,7 +1,7 @@
 const tasksList = document.querySelector(".tasks");
 const addTask = document.getElementById ("addBtn");
 const taskText = document.getElementById("addTxt");
-// const delTask = document.querySelector(".delete");
+
 const delTask = document.getElementsByClassName("delete");
 
 
@@ -25,11 +25,13 @@ function createTask() {
         window.alert("Your task is empty!");
     }
     else {
-        newTask.textContent = text;
+        
         tasksList.appendChild(newTask); 
+        createCheckBox(newTask, text);
         createButton (newTask, "important");
         createButton (newTask, "edit"); 
-        createButton (newTask, "delete");       
+        createButton (newTask, "delete");     
+        addListenerToDeleteButtons ();  
         clearInput();
     } 
 } 
@@ -39,36 +41,39 @@ function clearInput() {
     taskText.value="";
 }
 
+// create checkbox asnd label for it
+function createCheckBox (newTask, text) {
+
+    let newLabel = document.createElement ("label");
+    newLabel.innerText = text;
+    newTask.appendChild(newLabel);
+
+    let newCheckBox = document.createElement("input");
+    newCheckBox.setAttribute("type", "checkbox");
+    newLabel.prepend(newCheckBox);    
+
+}
+
 // this function adds one button to the new task
 function createButton(newTask, newBtnText) {
-    console.log(newBtnText);
     let newButton = document.createElement("button");
     newButton.textContent = newBtnText;
-    console.log(newButton.textContent);
     newTask.appendChild(newButton);
-    newButton.setAttribute("class", newBtnText);
-    console.log(newTask);
-
-
-
+    newButton.setAttribute("class", newBtnText);   
 }
 
 //this function deletes one task from the tasks list
 function deleteTask(event) {
-    console.log(event.target);
-    let task = event.target.parentNode;
-    console.log(task);
+    let task = event.target.parentNode;    
     tasksList.removeChild(task);
 }
 
 // this function adds listener for every delete button
 function addListenerToDeleteButtons () {    
     for (let i=0;i<delTask.length;i++){
-            delTask[i].addEventListener('click',deleteTask);
-            console.log(delTask[i]);
+            delTask[i].addEventListener('click',deleteTask);            
     }
 }
 
 addTask.addEventListener('click', createTask);
 addListenerToDeleteButtons ();
-
