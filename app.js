@@ -1,9 +1,11 @@
 const tasksList = document.querySelector(".tasks");
+const checkbox = document.getElementsByClassName("taskCheck");
 const addTask = document.getElementById ("addBtn");
 const taskText = document.getElementById("addTxt");
 
 const delTask = document.getElementsByClassName("delete");
 
+console.log(checkbox);
 
 // this function updates the date and time
 function updateDateTime() {
@@ -24,8 +26,7 @@ function createTask() {
     if (text==="") {
         window.alert("Your task is empty!");
     }
-    else {
-        
+    else {        
         tasksList.appendChild(newTask); 
         createCheckBox(newTask, text);
         createButton (newTask, "important");
@@ -35,6 +36,7 @@ function createTask() {
         clearInput();
     } 
 } 
+
 
 // prevent starover if Enter key preesed during new task creation
 function enterPressed (event) {
@@ -62,6 +64,7 @@ function createCheckBox (newTask, text) {
 
     let newCheckBox = document.createElement("input");
     newCheckBox.setAttribute("type", "checkbox");
+    newCheckBox.setAttribute("class", "taskCheck");
     newLabel.prepend(newCheckBox);    
 
 }
@@ -80,13 +83,41 @@ function deleteTask(event) {
     tasksList.removeChild(task);
 }
 
+
+
 // this function adds listener for every delete button
 function addListenerToDeleteButtons () {    
     for (let i=0;i<delTask.length;i++){
-            delTask[i].addEventListener('click',deleteTask);            
+        delTask[i].addEventListener('click',deleteTask); 
     }
 }
+
+// striketrough text then box checked
+function finishTask(event) {
+    let box = event.target;
+    // If checked strikethrough
+                if (this.checked) {
+                    
+                    box.parentNode.setAttribute ("class", "boxChecked");
+                }
+
+                // If unchecked, remove the strikethrough
+                else {
+                    box.parentNode.classList.replace ("boxChecked", "boxUnchecked");
+                }
+}
+
+// add listener for every checkbox
+function addListenerToCheck() {        
+    for (let i=0;i<checkbox.length;i++){
+        checkbox[i].addEventListener('change',finishTask);   
+        console.log(checkbox[i]);
+    }          
+}
+
+
 
 addTask.addEventListener('click', createTask);
 taskText.addEventListener('keydown', enterPressed);
 addListenerToDeleteButtons ();
+addListenerToCheck();

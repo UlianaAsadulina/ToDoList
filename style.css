@@ -32,6 +32,16 @@
     height: 30px;
 }
 
+.boxChecked {
+    text-decoration: line-through;
+
+}
+
+.boxUnchecked {
+    text-decoration: none;
+
+}
+
 .addContainer {
     border: solid blue;
     padding: 10px;
