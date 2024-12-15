@@ -22,23 +22,42 @@
        </div>
        <div class="main">
             <ul class="tasks">
-                <li id="oneTask">
-                    <label>
-                        <input type="checkbox" class="taskCheck" id="task1">My task #1
-                    </label>
-                    <button class="important">important</button>
-                    <button class="edit">edit</button>
-                    <button class="delete">delete</button>
+                <li class="oneTask">
+                    <div class="firstLine">
+                       
+                            <input type="checkbox" class="taskCheck" id="task1">
+                           
+                      
+                            <label for="task1">My task #1</label>
+                            <input type="text" class="editTask">
+                            <input type="submit" value="OK" class="submitEdit" onclick="editSubmit(event)">
+                      
+                        
+                            <button class="important" onclick="importantTask (event)">important</button>
+                            <button class="edit" onclick="editTaskText(event)">edit</button>
+                            <button class="delete" onclick="deleteTask(event)">delete</button>
+                        
+                    </div>
+                    <div class="secondLine">
+                        <div class="taskDate">Date</div>
+                        <div class="taskTime">Time</div>
+                    </div>
                 </li>    
                     
                 
-                <li> 
+                <li class="oneTask"> 
                     <label>
                         <input type="checkbox" class="taskCheck" id="task2">My task #2
                     </label>
+                    <input type="text" value="" class="editTask">
+                    <input type="submit" value="OK" class="submitEdit">
                     <button class="important">important</button>
                     <button class="edit">edit</button>
                     <button class="delete">delete</button>
+                    <!-- <p class="dateTime">
+                        <span>Date</span>
+                        <span>Time</span>
+                    </p> -->
                 </li>
                 
             </ul>
@@ -47,8 +66,11 @@
 
        <div class="addContainer">
             <form >
-                <input type="button" value="+" id="addBtn">
-                <input type="text" id="addTxt" placeholder="add new task">            
+                <input type="submit" value="+" id="addBtn">
+                <input type="text" id="addTxt" placeholder="add new task" required>   
+                
+                <!-- <input type="date" name="AD" id="addDate"> 
+                <input type="time" name="AT" id="addTime">-->
             </form>
        </div>
 

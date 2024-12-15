@@ -25,11 +25,35 @@
 
 .tasks {
     list-style: none;
+    padding-left: 1px;
 }
 
-.tasks > li {
+.oneTask {
     border-bottom: 1px solid rgb(185, 166, 141);
-    height: 30px;
+    height: 70px;
+}
+
+.firstLine  {
+    display: flex;
+
+
+}
+
+.taskCheck {
+    margin-right: 5px;
+    width: 15px;
+}
+
+
+
+.secondLine {
+    display: flex;
+    padding-left: 25px;
+    color:rgb(156, 141, 122);
+    font-size: 9pt;
+    font-style: italic;
+
+
 }
 
 .boxChecked {
@@ -41,6 +65,20 @@
     text-decoration: none;
 
 }
+
+.taskImportant {
+    color: red;
+}
+
+
+.editTask {
+    display: none;
+}
+
+.submitEdit {
+    display: none;
+}
+
 
 .addContainer {
     border: solid blue;
