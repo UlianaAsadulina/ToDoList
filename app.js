@@ -180,6 +180,6 @@ function editSubmit (event) {
 
 addTask.addEventListener('click', createTask);
 taskText.addEventListener('keydown', enterPressed);
-addListenerToDeleteButtons ();
+// addListenerToDeleteButtons ();
 addListenerToCheck();
-addListenerToImportantButtons();
+// addListenerToImportantButtons();
