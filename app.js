@@ -1,13 +1,19 @@
 const tasksList = document.querySelector(".tasks");
 const checkbox = document.getElementsByClassName("taskCheck");
+
 const addTask = document.getElementById ("addBtn");
 const taskText = document.getElementById("addTxt");
 
 const delTask = document.getElementsByClassName("delete");
+const keyTask = document.getElementsByClassName("important");
 
-console.log(checkbox);
+let isChecked = [];
+for (let i=0; i<tasksList.length; i++) {
+    isChecked[i]=false;
+}
 
-// this function updates the date and time
+
+// set date and time
 function updateDateTime() {
     let now = new Date();
     let currentDateTime = now.toLocaleString();
@@ -19,7 +25,7 @@ setInterval(updateDateTime, 1000);
 
 
 
-//this function adds one task to the tasks list
+//add one task to the tasks list
 function createTask() {
     let newTask = document.createElement("li") ;
     let text = taskText.value;
@@ -55,7 +61,7 @@ function clearInput() {
     taskText.value="";
 }
 
-// create checkbox asnd label for it
+// create checkbox and label for it
 function createCheckBox (newTask, text) {
 
     let newLabel = document.createElement ("label");
@@ -69,7 +75,7 @@ function createCheckBox (newTask, text) {
 
 }
 
-// this function adds one button to the new task
+// add one button to the new task
 function createButton(newTask, newBtnText) {
     let newButton = document.createElement("button");
     newButton.textContent = newBtnText;
@@ -77,7 +83,23 @@ function createButton(newTask, newBtnText) {
     newButton.setAttribute("class", newBtnText);   
 }
 
-//this function deletes one task from the tasks list
+//make text red if task important
+function importantTask (event) {
+    let task = event.target.parentNode;   
+    
+    task.classList.toggle("taskImportant");
+    // task.style.color = 'red';
+}
+
+// add listener for every delete button
+function addListenerToImportantButtons () {    
+    for (let i=0;i<keyTask.length;i++){
+        keyTask[i].addEventListener('click',importantTask); 
+    }
+}
+
+
+//delete one task from the tasks list
 function deleteTask(event) {
     let task = event.target.parentNode;    
     tasksList.removeChild(task);
@@ -85,7 +107,7 @@ function deleteTask(event) {
 
 
 
-// this function adds listener for every delete button
+// add listener for every delete button
 function addListenerToDeleteButtons () {    
     for (let i=0;i<delTask.length;i++){
         delTask[i].addEventListener('click',deleteTask); 
@@ -111,7 +133,7 @@ function finishTask(event) {
 function addListenerToCheck() {        
     for (let i=0;i<checkbox.length;i++){
         checkbox[i].addEventListener('change',finishTask);   
-        console.log(checkbox[i]);
+        
     }          
 }
 
@@ -121,3 +143,4 @@ addTask.addEventListener('click', createTask);
 taskText.addEventListener('keydown', enterPressed);
 addListenerToDeleteButtons ();
 addListenerToCheck();
+addListenerToImportantButtons();
