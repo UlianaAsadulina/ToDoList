@@ -25,60 +25,43 @@
 
 .tasks {
     list-style: none;
-    padding-left: 1px;
-}
-
-.oneTask {
-    border-bottom: 1px solid rgb(185, 166, 141);
-    height: 70px;
-}
-
-.firstLine  {
-    display: flex;
-
-
-}
-
-.taskCheck {
-    margin-right: 5px;
-    width: 15px;
-}
-
-
-
-.secondLine {
-    display: flex;
-    padding-left: 25px;
-    color:rgb(156, 141, 122);
-    font-size: 9pt;
-    font-style: italic;
-
-
-}
-
-.boxChecked {
-    text-decoration: line-through;
-
-}
-
-.boxUnchecked {
-    text-decoration: none;
-
 }
 
 .taskImportant {
     color: red;
 }
 
+.tasks > li {
+    border-bottom: 1px solid rgb(185, 166, 141);
+    height: 30px;
+    display: flex;
+    align-items: center;
+}
+ label {
+    width: 60%;
+ }
 
-.editTask {
-    display: none;
+
+
+
+.boxChecked {
+    display: flex;
+    
+    text-decoration: line-through;
+
 }
 
-.submitEdit {
-    display: none;
+.boxUnchecked {
+    display: flex;
+    
+    text-decoration: none;
+
 }
 
+.important, .delete {
+    margin-left: 5px;
+    background-color: rgb(185, 166, 141);
+}
 
 .addContainer {
     border: solid blue;
