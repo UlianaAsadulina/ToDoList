@@ -39,12 +39,12 @@ body {
 
 .tasks > li {
     border-bottom: 1px solid rgb(185, 166, 141);
-    height: 30px;
+    height: 40px;
     display: flex;
     align-items: center;
 }
  label {
-    width: 55%;
+    width: 75%;
     padding-left: 10px;
  }
 
@@ -70,43 +70,46 @@ body {
     border-radius: 5px;
     margin-left: 5px;
     background-color: antiquewhite;
+    height: 25px;
 }
 
 .addContainer {
     /* border: solid blue; */
-    padding: 10px;
+    padding: 10px 0px 10px 1px;
 }
 
 #addTxt {
     background-color: blanchedalmond;
-    border: solid rgb(185, 166, 141);
+    border: 2px solid rgb(185, 166, 141);
     border-radius: 5px;
     box-sizing: border-box;
     font-size: 11pt;
     height: 30px;
-    width: 50%;
+    width: 90%;
     padding-left: 5px;
 }
 
-#addTxt:hover {
+#addTxt:active, #addTxt:hover {
     background-color: white;
-    border: solid rgb(185, 166, 141);
+    border: 2px solid rgb(185, 166, 141);
     border-radius: 5px;
     box-sizing: border-box;
     font-size: 11pt;
     height: 30px;
-    width: 50%;
+    width: 95%;
     padding-left: 5px;
 }
 
 #addBtn {
     background-color: blanchedalmond;
-    border: solid rgb(185, 166, 141);
+    border: 2px solid rgb(185, 166, 141);
     border-radius: 10%;
     box-sizing: border-box;
     font-size: 11pt;
     font-weight: 500;
     height: 30px;
     width: 30px;
+    margin-left: 2px;
+    margin-right: 5px;
     padding: 5px;
 }
