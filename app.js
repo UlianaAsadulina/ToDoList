@@ -136,6 +136,6 @@ function addListenerToCheck() {
 
 addTask.addEventListener('click', createTask);
 taskText.addEventListener('keydown', enterPressed);
-// addListenerToDeleteButtons ();
+addListenerToDeleteButtons ();
 addListenerToCheck();
-// addListenerToImportantButtons();
+addListenerToImportantButtons();
