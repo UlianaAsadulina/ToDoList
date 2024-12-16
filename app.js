@@ -32,8 +32,7 @@ function createTask() {
     else {        
         tasksList.appendChild(newTask); 
         createCheckBox(newTask, text);
-        createButton (newTask, "important");
-        createButton (newTask, "edit"); 
+        createButton (newTask, "important");   
         createButton (newTask, "delete");     
         addListenerToDeleteButtons (); 
         addListenerToCheck ();
@@ -115,7 +114,7 @@ function addListenerToDeleteButtons () {
 
 // striketrough text then box checked
 function finishTask(boxEvent){
-    console.trace(boxEvent.target.checked);
+    
     if (boxEvent.target.checked) {
         boxEvent.target.nextElementSibling.setAttribute("class", "boxChecked");
     }  else {

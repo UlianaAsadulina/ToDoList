@@ -58,6 +58,11 @@
 
 }
 
+.important, .delete {
+    margin-left: 5px;
+    background-color: rgb(185, 166, 141);
+}
+
 .addContainer {
     border: solid blue;
     padding: 10px;
