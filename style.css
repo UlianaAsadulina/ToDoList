@@ -25,6 +25,7 @@ body {
     background-color: blanchedalmond;
     /* border: solid red; */
     padding: 10px;
+    height:  70vh;
 }
 
 .tasks {
@@ -43,7 +44,7 @@ body {
     align-items: center;
 }
  label {
-    width: 50%;
+    width: 55%;
     padding-left: 10px;
  }
 
@@ -65,8 +66,10 @@ body {
 }
 
 .important, .delete {
+    border: 1px solid  rgb(185, 166, 141);
+    border-radius: 5px;
     margin-left: 5px;
-    background-color: rgb(185, 166, 141);
+    background-color: antiquewhite;
 }
 
 .addContainer {
